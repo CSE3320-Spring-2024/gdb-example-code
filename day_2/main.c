@@ -2,11 +2,32 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+// Reverse Debug 
+//
+// gdb ./a.out
+// break main
+//
+// target record-full  // used to be target record
+// or 
+// record
+//
+// rs - reverse step
+// rn - reverse next
+// rc - reverse continue
+
 int val = 0;
 int z   = 4096;
 
-extern void do_stuff( );
-extern int  thread_main( );
+void foo( )
+{
+  int y = 10;
+  int i;
+
+  for( i = 0; i < y; i++ )
+  {
+    printf("%d\n", i );
+  }
+}
 
 int loop( int arg )
 {
@@ -35,6 +56,8 @@ int main( int argc, char * argv[] )
 
   z = 12;
 
+  foo( );
+
   z = 13;
 
   z = 14;
@@ -44,8 +67,6 @@ int main( int argc, char * argv[] )
   z = 16;
 
   loop( val );
-
-  do_stuff( );
 
   printf("Z: %d\n", z );
 
