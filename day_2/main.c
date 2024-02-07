@@ -29,6 +29,20 @@ int main( int argc, char * argv[] )
   
   z = 5;
 
+  z = 10;
+
+  z = 11;
+
+  z = 12;
+
+  z = 13;
+
+  z = 14;
+
+  z = 15;
+
+  z = 16;
+
   loop( val );
 
   do_stuff( );
