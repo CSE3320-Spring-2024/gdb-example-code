@@ -6,7 +6,7 @@
 
 
 /*  
- *    Use gdb to trace a proceblem with a child process
+ *    Use gdb to trace a problem with a child process
  *
  *    set follow-exec-mode child
  *
@@ -23,7 +23,7 @@ int main( int argc, char * argv[] )
 
   if( pid == 0 )
   {
-     if( strcmp( token[0], "exit" ) == 0 )
+     if( strcmp( token[0], ">" ) == 0 )
      {
         printf("Found one\n");
      }  
